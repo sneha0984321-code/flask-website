@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Home - Expense Tracker {% endblock %} 
+
+{% block content %}
+<div class = "card" style = "text-align: center; padding: 3rem;">
+    <h1>Welcome to the Expense Tracker</h1>
+    <p style = "color:#6b3b96; margin:1rem 0;">Track your expenses easily and efficiently.</p>
+    {% if session.get('user_id') %}
+        <p>You are already logged in. Visit Dashboard.
+            <a href="{{ url_for('dashboard') }}">
+            dashboard</a>.</p>
+    {% else %}
+        <a href="{{ url_for('register') }}" class = "btn" style = "color: yellow; background:#6b3b96">Register</a> or 
+        <a href="{{ url_for('login') }}" class = "btn" style = "color: yellow; background:#0707e0">Login</a> 
+            to get started.
+        </p>
+    {% endif %}
+</div>
+{% endblock %}

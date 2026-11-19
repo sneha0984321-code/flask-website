@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Logout - Expense Tracker {% endblock %}
+
+{% block content %}
+
+<div class="card" style="max-width:400px; margin:auto; text-align:center;">
+
+    <h2>Logout</h2>
+    <br>
+
+    <p>Are you sure you want to logout?</p>
+
+    <form method="POST" action="{{ url_for('logout') }}">
+
+        <button type="submit" class="btn btn-primary">
+            Yes, Logout
+        </button>
+
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}
