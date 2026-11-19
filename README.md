@@ -65,7 +65,7 @@ Expense-Tracker/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/sneha0984321-code/flask-website
 ```
 
 ### 2. Navigate to the Project Directory
